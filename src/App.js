@@ -1,6 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 
-function App() {
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -28,7 +28,7 @@ function App() {
       <Expenses items={expenses} />
     </div> // this JSX
   );
-}
+};
 // to do what jsx does, we have to do this in js vanilla (imperative):
 // const para = document.createElement('p');
 // para.textContent = 'this is also visible';
