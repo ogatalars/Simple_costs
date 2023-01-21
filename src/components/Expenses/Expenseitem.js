@@ -1,7 +1,7 @@
 import ExpenseDate from "./ExpenseDate";
 // a component in react is just a js function
 import "./Expenseitem.css";
-import Card from "./Card";
+import Card from "..UI/Card";
 
 function ExpenseItem(props) {
   // const expenseDate = new Date(2023, 3, 23);
