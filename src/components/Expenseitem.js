@@ -1,6 +1,7 @@
 import ExpenseDate from "./ExpenseDate";
 // a component in react is just a js function
 import "./Expenseitem.css";
+import Card from "./Card";
 
 function ExpenseItem(props) {
   // const expenseDate = new Date(2023, 3, 23);
@@ -17,7 +18,7 @@ function ExpenseItem(props) {
     //     <div className="expense-item__price">{props.amount}</div>
     //   </div>
     // </div>
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate date={props.date} />
       {/* <div>
         <div>{month}</div>
@@ -28,7 +29,7 @@ function ExpenseItem(props) {
         <h2>{props.title}</h2>
         <div className="expense-item__price"> ${props.amount}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 
