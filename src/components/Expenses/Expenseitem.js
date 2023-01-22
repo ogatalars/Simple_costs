@@ -1,9 +1,15 @@
 import ExpenseDate from "./ExpenseDate";
+import React, { useState } from "react";
 // a component in react is just a js function
 import "./Expenseitem.css";
 import Card from "..UI/Card";
 
 const ExpenseItem = (props) => {
+  const [title, setTitle] = useState(props.title); // react hook
+
+  const clickHandler = () => {
+    setTitle("Updated!");
+  };
   // const expenseDate = new Date(2023, 3, 23);
   // const expenseTitle = "Car Insurence";
   // const expenseAmount = 245.32;
@@ -26,9 +32,10 @@ const ExpenseItem = (props) => {
         <div>{day}</div>
       </div> */}
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price"> ${props.amount}</div>
       </div>
+      <button onClick={clickHandler}> Change Title</button>
     </Card>
   );
 };
