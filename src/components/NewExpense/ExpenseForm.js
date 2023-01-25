@@ -13,14 +13,13 @@ const ExpenseForm = () => {
     // console.log(event);
     // console.log(event.target.value);
     // setEnteredTitle(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredTitle: event.target.value,
+    setUserInput((prevState) => {
+      return { ...prevState, enteredTitle: event.target.value };
     });
   };
 
   const amountChangeHandler = (event) => {
-    setUserInput({ ...userInput, emteredAmount: event.target.value });
+    setUserInput({ ...userInput, emteredAmount: event.target.value }); // we have to use this form, if our state depends on a previus state
   };
 
   const dateChangeHandler = (event) => {
